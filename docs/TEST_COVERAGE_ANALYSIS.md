@@ -1,6 +1,6 @@
 # Test Coverage Analysis
 
-**Package**: responsive_builder2 v0.8.9  
+**Package**: responsive_builder v0.8.9  
 **Date**: 2026-02-08  
 **Total Tests**: 137 (all passing)  
 **Test Files**: 9  

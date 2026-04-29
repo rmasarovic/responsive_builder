@@ -1,6 +1,6 @@
-![Responsive UI in Flutter Banner](https://github.com/Corkscrews/responsive_builder/blob/master/responsive_builder2.jpg)
+![Responsive UI in Flutter Banner](https://github.com/Corkscrews/responsive_builder/blob/master/responsive_builder.jpg)
 
-# responsive_builder2
+# responsive_builder
 
 A Flutter package for building readable, responsive UIs across every screen size and device type. Forked from [FilledStacks' responsive_builder](https://www.youtube.com/playlist?list=PLQQBiNtFxeyJbOkeKBe_JG36gm1V2629H) and maintained by [Corkscrews](https://github.com/Corkscrews/responsive_builder).
 
@@ -36,13 +36,13 @@ Add the package to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  responsive_builder2: ^0.8.9
+  responsive_builder: ^0.8.9
 ```
 
 Then import it:
 
 ```dart
-import 'package:responsive_builder2/responsive_builder2.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 ```
 
 ## Quick Start

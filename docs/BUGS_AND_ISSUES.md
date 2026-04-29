@@ -1,6 +1,6 @@
 # Bugs and Issues Report
 
-**Package**: responsive_builder2 v0.8.9  
+**Package**: responsive_builder v0.8.9  
 **Date**: 2026-02-08  
 **Status**: All 84 tests passing (deduplicated from 117)  
 **Fixed**: 8 of 13 bugs resolved + 1 of 2 test issues resolved

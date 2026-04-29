@@ -1,6 +1,6 @@
 # Code Quality Report
 
-**Package**: responsive_builder2 v0.8.9  
+**Package**: responsive_builder v0.8.9  
 **Date**: 2026-02-08  
 **Dart SDK**: >=2.17.0 <4.0.0  
 **Flutter Test**: All 137 tests passing  
@@ -54,7 +54,7 @@ The package offers a clean, layered API surface:
 
 ### 2. Good Documentation
 Most public APIs have clear doc comments with parameter descriptions and
-examples. The library-level documentation in `responsive_builder2.dart`
+examples. The library-level documentation in `responsive_builder.dart`
 provides a good overview.
 
 ### 3. Flexible Breakpoint System

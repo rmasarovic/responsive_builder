@@ -1,13 +1,13 @@
 # Architecture Review
 
-**Package**: responsive_builder2 v0.9.0  
+**Package**: responsive_builder v0.9.0  
 **Date**: 2026-02-08
 
 ---
 
 ## Overview
 
-responsive_builder2 is a Flutter package that provides widgets and utilities
+responsive_builder is a Flutter package that provides widgets and utilities
 for building responsive UIs. It helps developers adapt layouts to different
 screen sizes (watch, phone, tablet, desktop) and orientations (portrait,
 landscape) without scattering conditional logic throughout the codebase.
@@ -360,7 +360,7 @@ patterns. Consumer code will require non-trivial migration.
 ## Dependency Graph
 
 ```
-responsive_builder2
+responsive_builder
 ├── flutter (SDK)
 └── universal_platform ^1.1.0
     └── (used for platform detection in helpers.dart)

@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:responsive_builder2/src/helpers/device_width.dart';
+import 'package:responsive_builder/src/helpers/device_width.dart';
 
 void main() {
   group('deviceWidth', () {

@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
-import 'package:responsive_builder2/responsive_builder2.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 import 'device_width.dart' if (dart.library.js_interop) 'device_width_web.dart'
     as width;
