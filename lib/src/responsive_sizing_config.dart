@@ -1,4 +1,4 @@
-import 'package:responsive_builder2/responsive_builder2.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 /// A singleton configuration class that manages breakpoints for responsive
 /// layouts.
