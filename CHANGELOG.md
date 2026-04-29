@@ -1,3 +1,9 @@
+## 0.10.0
+
+### Improvements
+
+- **Remove `universal_platform` dependency** — Replaced `UniversalPlatform.isWindows/isLinux/isMacOS` with Flutter's built-in `defaultTargetPlatform` from `package:flutter/foundation.dart`. The package now has **zero third-party dependencies** beyond the Flutter SDK, and no transitive `dart:io` references — strengthening WebAssembly (WASM) compatibility. Behavior is identical: `_isWebOrDesktop` resolves to the same value across all runtimes (web JS, web WASM, desktop, mobile).
+
 ## 0.9.0
 
 ### Bug Fixes

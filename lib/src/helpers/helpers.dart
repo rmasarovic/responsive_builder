@@ -1,18 +1,15 @@
-// Removed import 'dart:io' for WASM compatibility.
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:responsive_builder2/responsive_builder2.dart';
-import 'package:universal_platform/universal_platform.dart';
 
 import 'device_width.dart' if (dart.library.js_interop) 'device_width_web.dart'
     as width;
 
 /// Determines if the current platform is web or desktop (WASM compatible)
 final _isWebOrDesktop = kIsWeb ||
-    UniversalPlatform.isWindows ||
-    UniversalPlatform.isLinux ||
-    UniversalPlatform.isMacOS;
+    defaultTargetPlatform == TargetPlatform.windows ||
+    defaultTargetPlatform == TargetPlatform.linux ||
+    defaultTargetPlatform == TargetPlatform.macOS;
 
 /// Returns the [DeviceScreenType] that the application is currently running on
 ///
