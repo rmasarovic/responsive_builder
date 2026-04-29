@@ -29,7 +29,7 @@ class SizingInformation {
 
   /// Returns true if the device is a phone
   bool get isPhone =>
-      deviceScreenType == DeviceScreenType.phone ||
+      deviceScreenType == DeviceScreenType.mobile ||
       // ignore: deprecated_member_use_from_same_package
       deviceScreenType == DeviceScreenType.mobile;
 
@@ -108,47 +108,54 @@ class SizingInformation {
 /// - width >= [large]                => desktop or tablet (based on platform)
 class ScreenBreakpoints {
   /// The breakpoint below which a device is considered a watch
-  final double small;
+  final double watch;
 
   /// The breakpoint between phone and tablet.
   ///
-  /// Values greater than or equal to [normal] and less than [large]
+  /// Values greater than or equal to [tablet] and less than [desktop]
   /// will be considered tablet.
-  final double normal;
+  final double tablet;
 
   /// The breakpoint above which a device is considered large (tablet/desktop)
-  final double large;
+  final double desktop;
+
+  /// Aliases kept for forward-compat with the upstream Corkscrews fork API
+  /// (small/normal/large). The canonical names are watch/tablet/desktop,
+  /// matching `responsive_builder` 0.7.1 on pub.dev.
+  double get small => watch;
+  double get normal => tablet;
+  double get large => desktop;
 
   /// Creates a new [ScreenBreakpoints] instance.
   ///
-  /// [small], [normal] and [large] are required and should be specified in
-  /// logical pixels. Values must satisfy `small < normal < large` and all
+  /// [watch], [tablet] and [desktop] are required and should be specified in
+  /// logical pixels. Values must satisfy `watch < tablet < desktop` and all
   /// must be non-negative.
   const ScreenBreakpoints({
-    required this.small,
-    required this.normal,
-    required this.large,
-  })  : assert(small >= 0, 'small must be non-negative'),
-        assert(normal >= 0, 'normal must be non-negative'),
-        assert(large >= 0, 'large must be non-negative'),
-        assert(small < normal, 'small must be less than normal'),
-        assert(normal < large, 'normal must be less than large');
+    required this.watch,
+    required this.tablet,
+    required this.desktop,
+  })  : assert(watch >= 0, 'watch must be non-negative'),
+        assert(tablet >= 0, 'tablet must be non-negative'),
+        assert(desktop >= 0, 'desktop must be non-negative'),
+        assert(watch < tablet, 'watch must be less than tablet'),
+        assert(tablet < desktop, 'tablet must be less than desktop');
 
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
       other is ScreenBreakpoints &&
           runtimeType == other.runtimeType &&
-          small == other.small &&
-          normal == other.normal &&
-          large == other.large;
+          watch == other.watch &&
+          tablet == other.tablet &&
+          desktop == other.desktop;
 
   @override
-  int get hashCode => Object.hash(small, normal, large);
+  int get hashCode => Object.hash(watch, tablet, desktop);
 
   @override
   String toString() {
-    return 'Large: $large, Normal: $normal, Small: $small';
+    return 'Desktop: $desktop, Tablet: $tablet, Watch: $watch';
   }
 }
 
