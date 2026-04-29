@@ -42,7 +42,7 @@ DeviceScreenType getDeviceType(Size size,
 
     // Classify phone/tablet using normal
     if (deviceWidth < breakpoint.normal) {
-      return DeviceScreenType.phone;
+      return DeviceScreenType.mobile;
     }
     return DeviceScreenType.tablet;
   }
@@ -58,7 +58,7 @@ DeviceScreenType getDeviceType(Size size,
   // Use global normal threshold
   final globalNormal = ResponsiveSizingConfig.instance.breakpoints.normal;
   if (deviceWidth < globalNormal) {
-    return DeviceScreenType.phone;
+    return DeviceScreenType.mobile;
   }
   return DeviceScreenType.tablet;
 }
@@ -131,7 +131,7 @@ RefinedSize getRefinedSize(
       return RefinedSize.small;
     }
 
-    if (deviceScreenType == DeviceScreenType.phone) {
+    if (deviceScreenType == DeviceScreenType.mobile) {
       if (deviceWidth >= refinedBreakpoint.mobileExtraLarge) {
         return RefinedSize.extraLarge;
       }
@@ -187,7 +187,7 @@ RefinedSize getRefinedSize(
     }
   }
 
-  if (deviceScreenType == DeviceScreenType.phone) {
+  if (deviceScreenType == DeviceScreenType.mobile) {
     if (deviceWidth >=
         ResponsiveSizingConfig.instance.refinedBreakpoints.mobileExtraLarge) {
       return RefinedSize.extraLarge;
@@ -250,7 +250,7 @@ T getValueForScreenType<T>({
     return watch;
   }
 
-  if (deviceScreenType == DeviceScreenType.phone) {
+  if (deviceScreenType == DeviceScreenType.mobile) {
     return mobile;
   }
 

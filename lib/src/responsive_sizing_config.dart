@@ -45,9 +45,9 @@ class ResponsiveSizingConfig {
   /// * [small]: 300 logical pixels - devices below this width are considered
   /// mobile
   static const ScreenBreakpoints _defaultBreakPoints = ScreenBreakpoints(
-    small: 300,
-    normal: 600,
-    large: 950,
+    watch: 300,
+    tablet: 600,
+    desktop: 950,
   );
 
   /// Custom breakpoints that override the defaults when set.
